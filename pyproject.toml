@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "kyc_ia"
+version = "0.1.0"
+description = "kyc_ia using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+kyc_ia = "kyc_ia.main:run"
+run_crew = "kyc_ia.main:run"
+train = "kyc_ia.main:train"
+replay = "kyc_ia.main:replay"
+test = "kyc_ia.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
